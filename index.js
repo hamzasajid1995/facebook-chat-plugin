@@ -1,5 +1,4 @@
 const express = require("express");
-require("dotenv").config();
 const { postWebhook, gettWebhook } = require("./facebookController");
 
 const app = express();

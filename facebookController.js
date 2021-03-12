@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 var postWebhook = (req, res) => {
   let body = req.body;
 
@@ -18,6 +20,7 @@ var postWebhook = (req, res) => {
     res.status(200).send("EVENT_RECEIVED");
   } else {
     // Returns a '404 Not Found' if event is not from a page subscription
+    console.log("error: res:", res);
     res.sendStatus(404);
   }
 };
